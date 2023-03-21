@@ -39,7 +39,7 @@ class ListScreen: UIViewController {
             collectionView, indexPath, data in
             
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ListCell.reuseIdentifier, for: indexPath) as! ListCell
-            cell.image.image = UIImage(data: self.data[indexPath.row].data)
+//            cell.image.image = UIImage(data: self.data[indexPath.row].data)
             
             return cell
         }
@@ -72,8 +72,6 @@ class ListScreen: UIViewController {
                 self?.presentAlertController(msg: error.localizedDescription)
             }
         }
-        
-        viewModel.downloadImages()
         
     }
     

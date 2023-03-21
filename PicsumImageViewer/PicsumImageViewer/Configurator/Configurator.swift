@@ -7,11 +7,14 @@
 
 import Foundation
 import PresentationLayer
+import DomainLayer
 
 final class Configurator {
     class func initializeListScreen(delegate: ListScreenDelegate) -> ListScreen {
         
-        let viewModel = ListScreenViewModel()
+        let useCase = DownloadImageUseCase()
+        
+        let viewModel = ListScreenViewModel(useCase: useCase)
         
         let viewController = ListScreen()
         viewController.coordinatorDelegate = delegate
