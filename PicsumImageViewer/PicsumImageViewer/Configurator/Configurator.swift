@@ -6,12 +6,17 @@
 //
 
 import Foundation
+import PresentationLayer
 
 final class Configurator {
     class func initializeListScreen(delegate: ListScreenDelegate) -> ListScreen {
+        
+        let viewModel = ListScreenViewModel()
+        
         let viewController = ListScreen()
         viewController.coordinatorDelegate = delegate
-        print("initializeListScreen")
+        viewController.viewModel = viewModel
+        
         return viewController
     }
     
