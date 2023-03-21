@@ -9,7 +9,7 @@ import UIKit
 import PresentationLayer
 
 protocol ListScreenDelegate: AnyObject {
-    func openImageScreen()
+    func openImageScreen(image: PresentationModel.Image)
 }
 
 class ListScreen: UIViewController {
@@ -20,9 +20,9 @@ class ListScreen: UIViewController {
     var viewModel: ListScreenViewModelInterface!
     
     /// Data Properties
-    private var data: Array<PresentationModel.ImageObject> = Array() {
+    private var data: Array<PresentationModel.Image> = Array() {
         didSet {
-            var snapshot = NSDiffableDataSourceSnapshot<Section, PresentationModel.ImageObject>()
+            var snapshot = NSDiffableDataSourceSnapshot<Section, PresentationModel.Image>()
             snapshot.appendSections([.main])
             snapshot.appendItems(data)
             dataSource.apply(snapshot)
@@ -34,12 +34,12 @@ class ListScreen: UIViewController {
         case main
     }
     
-    private lazy var dataSource: UICollectionViewDiffableDataSource<Section, PresentationModel.ImageObject> = {
-        let dataSource = UICollectionViewDiffableDataSource<Section, PresentationModel.ImageObject>(collectionView: collectionView) {
+    private lazy var dataSource: UICollectionViewDiffableDataSource<Section, PresentationModel.Image> = {
+        let dataSource = UICollectionViewDiffableDataSource<Section, PresentationModel.Image>(collectionView: collectionView) {
             collectionView, indexPath, data in
             
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ListCell.reuseIdentifier, for: indexPath) as! ListCell
-//            cell.image.image = UIImage(data: self.data[indexPath.row].data)
+            cell.loadImage(url: self.data[indexPath.row].url)
             
             return cell
         }
@@ -66,13 +66,11 @@ class ListScreen: UIViewController {
         viewModel.observeData = { [weak self] result in
             switch result {
             case .success(let data):
-                self?.data = data
-                print(data.count)
+                self?.data += data
             case .failure(let error):
                 self?.presentAlertController(msg: error.localizedDescription)
             }
         }
-        
     }
     
     private func initUIComponents() {
@@ -102,13 +100,12 @@ class ListScreen: UIViewController {
 
 extension ListScreen: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        coordinatorDelegate?.openImageScreen()
-        print("Selected index \(indexPath.row)")
+        coordinatorDelegate?.openImageScreen(image: data[indexPath.row])
     }
     
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
-        if indexPath.item == data.count - 1 {
-//            viewModel.downloadImages()
+        if indexPath.item == self.data.count - 1 {
+            self.viewModel.downloadImages()
         }
     }
 }

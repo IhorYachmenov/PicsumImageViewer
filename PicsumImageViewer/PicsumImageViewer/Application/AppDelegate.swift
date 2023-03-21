@@ -28,11 +28,7 @@ only gets blur images from API.
 */
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate, ListScreenDelegate {
-    func openImageScreen() {
-        //
-    }
-    
+class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     private var appCoordinator : AppCoordinator?
     

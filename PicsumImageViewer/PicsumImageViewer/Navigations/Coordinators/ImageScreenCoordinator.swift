@@ -6,18 +6,22 @@
 //
 
 import Foundation
+import PresentationLayer
 
 final class ImageScreenCoordinator: Coordinator {
     var children: [Coordinator] = []
     let router: Router
     var didFinished: (() -> Void)?
     
-    init(router: Router) {
+    private let image: PresentationModel.Image
+    
+    init(router: Router, image: PresentationModel.Image) {
         self.router = router
+        self.image = image
     }
     
     func start() {
-        let imageScreen = Configurator.initializeImageScreen(delegate: self)
+        let imageScreen = Configurator.initializeImageScreen(delegate: self, image: image)
         router.push(imageScreen, animated: true)
     }
     

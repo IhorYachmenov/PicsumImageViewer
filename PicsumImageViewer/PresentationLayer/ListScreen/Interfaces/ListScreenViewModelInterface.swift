@@ -9,7 +9,7 @@ import Foundation
 import DomainLayer
 
 public enum PresentationModel {
-    public struct ImageObject: Hashable {
+    public struct Image: Hashable {
         public let id: String
         public let url: String
         public let author: String
@@ -18,8 +18,8 @@ public enum PresentationModel {
     }
 }
 
-extension PresentationModel.ImageObject {
-    init(data: DomainModel.ImageObject) {
+extension PresentationModel.Image {
+    init(data: DomainModel.Image) {
         self.id = data.id
         self.url = data.url
         self.author = data.author
@@ -30,5 +30,5 @@ extension PresentationModel.ImageObject {
 
 public protocol ListScreenViewModelInterface: AnyObject {
     func downloadImages()
-    var observeData: ((Result<[PresentationModel.ImageObject], Error>) -> ())? { get set }
+    var observeData: ((Result<[PresentationModel.Image], Error>) -> ())? { get set }
 }

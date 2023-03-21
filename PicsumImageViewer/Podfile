@@ -1,0 +1,55 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'DomainLayer' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+  
+  # Pods for DomainLayer
+
+  target 'DomainLayerTests' do
+    # Pods for testing
+  end
+
+end
+
+target 'NetworkLayer' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for NetworkLayer
+
+  target 'NetworkLayerTests' do
+    # Pods for testing
+  end
+
+end
+
+target 'PicsumImageViewer' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+  pod 'SDWebImage', '~> 5.0'
+  # Pods for PicsumImageViewer
+
+  target 'PicsumImageViewerTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+  target 'PicsumImageViewerUITests' do
+    # Pods for testing
+  end
+
+end
+
+target 'PresentationLayer' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for PresentationLayer
+
+  target 'PresentationLayerTests' do
+    # Pods for testing
+  end
+
+end

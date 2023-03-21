@@ -9,7 +9,7 @@ import Foundation
 import NetworkLayer
 
 public enum DomainModel {
-    public struct ImageObject {
+    public struct Image {
         public let id: String
         public let url: String
         public let author: String
@@ -18,10 +18,10 @@ public enum DomainModel {
     }
 }
 
-extension DomainModel.ImageObject {
+extension DomainModel.Image {
     init(data: NetworkModel.Image) {
         self.id = data.id.isNil()
-        self.url = data.url.isNil()
+        self.url = data.downloadUrl.isNil()
         self.author = data.author.isNil()
         self.height = data.height.isNil()
         self.width = data.width.isNil()
@@ -29,5 +29,5 @@ extension DomainModel.ImageObject {
 }
 public protocol DownloadImagesUseCaseInterface: AnyObject {
     func downloadImages(page: Int)
-    var observeData: ((Result<[DomainModel.ImageObject], Error>) -> ())? { get set }
+    var observeData: ((Result<[DomainModel.Image], Error>) -> ())? { get set }
 }

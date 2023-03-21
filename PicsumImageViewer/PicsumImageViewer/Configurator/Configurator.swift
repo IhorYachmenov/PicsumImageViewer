@@ -23,8 +23,8 @@ final class Configurator {
         return viewController
     }
     
-    class func initializeImageScreen(delegate: ImageScreenDelegate) -> ImageScreen {
-        let viewController = ImageScreen()
+    class func initializeImageScreen(delegate: ImageScreenDelegate, image: PresentationModel.Image) -> ImageScreen {
+        let viewController = ImageScreen(image: image)
         viewController.coordinatorDelegate = delegate
         
         return viewController

@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import PresentationLayer
 
 final class ListScreenCoordinator: Coordinator {
     var children: [Coordinator] = []
@@ -27,8 +28,8 @@ final class ListScreenCoordinator: Coordinator {
         }
     }
     
-    private func openImageCoordinator() {
-        let imageCoordinator = ImageScreenCoordinator(router: router)
+    private func openImageCoordinator(image: PresentationModel.Image) {
+        let imageCoordinator = ImageScreenCoordinator(router: router, image: image)
         coordinate(to: imageCoordinator)
         
         imageCoordinator.didFinished = { [weak self, weak imageCoordinator] in
@@ -40,7 +41,7 @@ final class ListScreenCoordinator: Coordinator {
 
 // MARK: - Delegate
 extension ListScreenCoordinator: ListScreenDelegate {
-    func openImageScreen() {
-        openImageCoordinator()
+    func openImageScreen(image: PresentationModel.Image) {
+        openImageCoordinator(image: image)
     }
 }

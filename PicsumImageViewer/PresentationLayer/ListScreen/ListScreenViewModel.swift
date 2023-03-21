@@ -9,9 +9,9 @@ import Foundation
 import DomainLayer
 
 public final class ListScreenViewModel: ListScreenViewModelInterface {
-    private var page = 1
+    private var page = 2
     
-    public var observeData: ((Result<[PresentationModel.ImageObject], Error>) -> ())?
+    public var observeData: ((Result<[PresentationModel.Image], Error>) -> ())?
     
     private var useCase: DownloadImagesUseCaseInterface!
     
@@ -21,11 +21,16 @@ public final class ListScreenViewModel: ListScreenViewModelInterface {
         self.useCase.observeData = { [weak self] result in
             switch result {
             case .success(let data):
-                self?.observeData?(.success(data.map({ PresentationModel.ImageObject(data: $0) })))
-            case .failure(let failure):
-                self?.observeData?(.failure(failure))
+                DispatchQueue.main.async {
+                    self?.observeData?(.success(data.map({ PresentationModel.Image(data: $0) })))
+                }
                 
-                if (self?.page != 0) {
+            case .failure(let failure):
+                DispatchQueue.main.async {
+                    self?.observeData?(.failure(failure))
+                }
+                
+                if (self?.page != 1) {
                     self?.page -= 1
                 }
             }
