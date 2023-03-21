@@ -33,8 +33,15 @@
 		CE5650C829CA4F5D00E95085 /* DomainLayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE5650C029CA4F5D00E95085 /* DomainLayer.framework */; };
 		CE5650CF29CA4F5D00E95085 /* DomainLayerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5650CE29CA4F5D00E95085 /* DomainLayerTests.swift */; };
 		CE5650D329CA4F5D00E95085 /* DomainLayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE5650C029CA4F5D00E95085 /* DomainLayer.framework */; };
-		CE5650DF29CA507100E95085 /* DownloadImageUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5650DE29CA507100E95085 /* DownloadImageUseCase.swift */; };
-		CE5650E129CA509500E95085 /* DownloadImageUseCaseInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5650E029CA509500E95085 /* DownloadImageUseCaseInterface.swift */; };
+		CE5650DF29CA507100E95085 /* DownloadImagesUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5650DE29CA507100E95085 /* DownloadImagesUseCase.swift */; };
+		CE5650E129CA509500E95085 /* DownloadImagesUseCaseInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5650E029CA509500E95085 /* DownloadImagesUseCaseInterface.swift */; };
+		CE5650F029CA5D2600E95085 /* NetworkLayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE5650E829CA5D2500E95085 /* NetworkLayer.framework */; };
+		CE5650F729CA5D2600E95085 /* NetworkLayerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5650F629CA5D2600E95085 /* NetworkLayerTests.swift */; };
+		CE5650FB29CA5D2600E95085 /* NetworkLayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE5650E829CA5D2500E95085 /* NetworkLayer.framework */; };
+		CE56510629CA5D6C00E95085 /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE56510529CA5D6C00E95085 /* NetworkClient.swift */; };
+		CE56510829CA5E6300E95085 /* NetworkModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE56510729CA5E6300E95085 /* NetworkModel.swift */; };
+		CE56510B29CA601000E95085 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE56510A29CA601000E95085 /* Error.swift */; };
+		CE56510E29CA62A100E95085 /* Optional.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE56510D29CA62A100E95085 /* Optional.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -94,6 +101,27 @@
 			remoteGlobalIDString = CE5650BF29CA4F5D00E95085;
 			remoteInfo = DomainLayer;
 		};
+		CE5650F129CA5D2600E95085 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CE56502F29C9F90200E95085 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CE5650E729CA5D2500E95085;
+			remoteInfo = NetworkLayer;
+		};
+		CE5650F329CA5D2600E95085 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CE56502F29C9F90200E95085 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CE56503629C9F90200E95085;
+			remoteInfo = PicsumImageViewer;
+		};
+		CE5650F929CA5D2600E95085 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CE56502F29C9F90200E95085 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CE5650E729CA5D2500E95085;
+			remoteInfo = NetworkLayer;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -127,8 +155,15 @@
 		CE5650C029CA4F5D00E95085 /* DomainLayer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DomainLayer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE5650C729CA4F5D00E95085 /* DomainLayerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DomainLayerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE5650CE29CA4F5D00E95085 /* DomainLayerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomainLayerTests.swift; sourceTree = "<group>"; };
-		CE5650DE29CA507100E95085 /* DownloadImageUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadImageUseCase.swift; sourceTree = "<group>"; };
-		CE5650E029CA509500E95085 /* DownloadImageUseCaseInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadImageUseCaseInterface.swift; sourceTree = "<group>"; };
+		CE5650DE29CA507100E95085 /* DownloadImagesUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadImagesUseCase.swift; sourceTree = "<group>"; };
+		CE5650E029CA509500E95085 /* DownloadImagesUseCaseInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadImagesUseCaseInterface.swift; sourceTree = "<group>"; };
+		CE5650E829CA5D2500E95085 /* NetworkLayer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NetworkLayer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE5650EF29CA5D2500E95085 /* NetworkLayerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NetworkLayerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE5650F629CA5D2600E95085 /* NetworkLayerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkLayerTests.swift; sourceTree = "<group>"; };
+		CE56510529CA5D6C00E95085 /* NetworkClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkClient.swift; sourceTree = "<group>"; };
+		CE56510729CA5E6300E95085 /* NetworkModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkModel.swift; sourceTree = "<group>"; };
+		CE56510A29CA601000E95085 /* Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
+		CE56510D29CA62A100E95085 /* Optional.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Optional.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +171,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE5650FB29CA5D2600E95085 /* NetworkLayer.framework in Frameworks */,
 				CE5650D329CA4F5D00E95085 /* DomainLayer.framework in Frameworks */,
 				CE5650A529CA40C600E95085 /* PresentationLayer.framework in Frameworks */,
 			);
@@ -185,6 +221,21 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		CE5650E529CA5D2500E95085 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE5650EC29CA5D2500E95085 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE5650F029CA5D2600E95085 /* NetworkLayer.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -198,6 +249,8 @@
 				CE56509F29CA40C600E95085 /* PresentationLayerTests */,
 				CE5650C129CA4F5D00E95085 /* DomainLayer */,
 				CE5650CD29CA4F5D00E95085 /* DomainLayerTests */,
+				CE5650E929CA5D2500E95085 /* NetworkLayer */,
+				CE5650F529CA5D2600E95085 /* NetworkLayerTests */,
 				CE56503829C9F90200E95085 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -212,6 +265,8 @@
 				CE56509929CA40C600E95085 /* PresentationLayerTests.xctest */,
 				CE5650C029CA4F5D00E95085 /* DomainLayer.framework */,
 				CE5650C729CA4F5D00E95085 /* DomainLayerTests.xctest */,
+				CE5650E829CA5D2500E95085 /* NetworkLayer.framework */,
+				CE5650EF29CA5D2500E95085 /* NetworkLayerTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -429,7 +484,7 @@
 			isa = PBXGroup;
 			children = (
 				CE5650E229CA509900E95085 /* Interfaces */,
-				CE5650DE29CA507100E95085 /* DownloadImageUseCase.swift */,
+				CE5650DE29CA507100E95085 /* DownloadImagesUseCase.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -437,9 +492,44 @@
 		CE5650E229CA509900E95085 /* Interfaces */ = {
 			isa = PBXGroup;
 			children = (
-				CE5650E029CA509500E95085 /* DownloadImageUseCaseInterface.swift */,
+				CE5650E029CA509500E95085 /* DownloadImagesUseCaseInterface.swift */,
 			);
 			path = Interfaces;
+			sourceTree = "<group>";
+		};
+		CE5650E929CA5D2500E95085 /* NetworkLayer */ = {
+			isa = PBXGroup;
+			children = (
+				CE56510429CA5D3700E95085 /* REST */,
+			);
+			path = NetworkLayer;
+			sourceTree = "<group>";
+		};
+		CE5650F529CA5D2600E95085 /* NetworkLayerTests */ = {
+			isa = PBXGroup;
+			children = (
+				CE5650F629CA5D2600E95085 /* NetworkLayerTests.swift */,
+			);
+			path = NetworkLayerTests;
+			sourceTree = "<group>";
+		};
+		CE56510429CA5D3700E95085 /* REST */ = {
+			isa = PBXGroup;
+			children = (
+				CE56510929CA600300E95085 /* Extensions */,
+				CE56510729CA5E6300E95085 /* NetworkModel.swift */,
+				CE56510529CA5D6C00E95085 /* NetworkClient.swift */,
+			);
+			path = REST;
+			sourceTree = "<group>";
+		};
+		CE56510929CA600300E95085 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				CE56510A29CA601000E95085 /* Error.swift */,
+				CE56510D29CA62A100E95085 /* Optional.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -453,6 +543,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		CE5650BB29CA4F5D00E95085 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE5650E329CA5D2500E95085 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -475,6 +572,7 @@
 			dependencies = (
 				CE5650A429CA40C600E95085 /* PBXTargetDependency */,
 				CE5650D229CA4F5D00E95085 /* PBXTargetDependency */,
+				CE5650FA29CA5D2600E95085 /* PBXTargetDependency */,
 			);
 			name = PicsumImageViewer;
 			productName = PicsumImageViewer;
@@ -591,6 +689,43 @@
 			productReference = CE5650C729CA4F5D00E95085 /* DomainLayerTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		CE5650E729CA5D2500E95085 /* NetworkLayer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CE5650FD29CA5D2A00E95085 /* Build configuration list for PBXNativeTarget "NetworkLayer" */;
+			buildPhases = (
+				CE5650E329CA5D2500E95085 /* Headers */,
+				CE5650E429CA5D2500E95085 /* Sources */,
+				CE5650E529CA5D2500E95085 /* Frameworks */,
+				CE5650E629CA5D2500E95085 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NetworkLayer;
+			productName = NetworkLayer;
+			productReference = CE5650E829CA5D2500E95085 /* NetworkLayer.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		CE5650EE29CA5D2500E95085 /* NetworkLayerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CE56510129CA5D2A00E95085 /* Build configuration list for PBXNativeTarget "NetworkLayerTests" */;
+			buildPhases = (
+				CE5650EB29CA5D2500E95085 /* Sources */,
+				CE5650EC29CA5D2500E95085 /* Frameworks */,
+				CE5650ED29CA5D2500E95085 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CE5650F229CA5D2600E95085 /* PBXTargetDependency */,
+				CE5650F429CA5D2600E95085 /* PBXTargetDependency */,
+			);
+			name = NetworkLayerTests;
+			productName = NetworkLayerTests;
+			productReference = CE5650EF29CA5D2500E95085 /* NetworkLayerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -628,6 +763,14 @@
 						CreatedOnToolsVersion = 14.1;
 						TestTargetID = CE56503629C9F90200E95085;
 					};
+					CE5650E729CA5D2500E95085 = {
+						CreatedOnToolsVersion = 14.1;
+						LastSwiftMigration = 1410;
+					};
+					CE5650EE29CA5D2500E95085 = {
+						CreatedOnToolsVersion = 14.1;
+						TestTargetID = CE56503629C9F90200E95085;
+					};
 				};
 			};
 			buildConfigurationList = CE56503229C9F90200E95085 /* Build configuration list for PBXProject "PicsumImageViewer" */;
@@ -650,6 +793,8 @@
 				CE56509829CA40C600E95085 /* PresentationLayerTests */,
 				CE5650BF29CA4F5D00E95085 /* DomainLayer */,
 				CE5650C629CA4F5D00E95085 /* DomainLayerTests */,
+				CE5650E729CA5D2500E95085 /* NetworkLayer */,
+				CE5650EE29CA5D2500E95085 /* NetworkLayerTests */,
 			);
 		};
 /* End PBXProject section */
@@ -700,6 +845,20 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		CE5650C529CA4F5D00E95085 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE5650E629CA5D2500E95085 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE5650ED29CA5D2500E95085 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -767,8 +926,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE5650DF29CA507100E95085 /* DownloadImageUseCase.swift in Sources */,
-				CE5650E129CA509500E95085 /* DownloadImageUseCaseInterface.swift in Sources */,
+				CE5650DF29CA507100E95085 /* DownloadImagesUseCase.swift in Sources */,
+				CE5650E129CA509500E95085 /* DownloadImagesUseCaseInterface.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -777,6 +936,25 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE5650CF29CA4F5D00E95085 /* DomainLayerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE5650E429CA5D2500E95085 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE56510829CA5E6300E95085 /* NetworkModel.swift in Sources */,
+				CE56510B29CA601000E95085 /* Error.swift in Sources */,
+				CE56510629CA5D6C00E95085 /* NetworkClient.swift in Sources */,
+				CE56510E29CA62A100E95085 /* Optional.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE5650EB29CA5D2500E95085 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE5650F729CA5D2600E95085 /* NetworkLayerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -822,6 +1000,21 @@
 			isa = PBXTargetDependency;
 			target = CE5650BF29CA4F5D00E95085 /* DomainLayer */;
 			targetProxy = CE5650D129CA4F5D00E95085 /* PBXContainerItemProxy */;
+		};
+		CE5650F229CA5D2600E95085 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CE5650E729CA5D2500E95085 /* NetworkLayer */;
+			targetProxy = CE5650F129CA5D2600E95085 /* PBXContainerItemProxy */;
+		};
+		CE5650F429CA5D2600E95085 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CE56503629C9F90200E95085 /* PicsumImageViewer */;
+			targetProxy = CE5650F329CA5D2600E95085 /* PBXContainerItemProxy */;
+		};
+		CE5650FA29CA5D2600E95085 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CE5650E729CA5D2500E95085 /* NetworkLayer */;
+			targetProxy = CE5650F929CA5D2600E95085 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1193,7 +1386,7 @@
 		CE5650D629CA4F5E00E95085 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_MODULES = NO;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -1227,7 +1420,7 @@
 		CE5650D729CA4F5E00E95085 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_MODULES = NO;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -1285,6 +1478,109 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.DomainLayerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PicsumImageViewer.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/PicsumImageViewer";
+			};
+			name = Release;
+		};
+		CE5650FE29CA5D2A00E95085 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = NO;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = YSQD9849J2;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.NetworkLayer;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_INSTALL_OBJC_HEADER = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		CE5650FF29CA5D2A00E95085 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = NO;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = YSQD9849J2;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.NetworkLayer;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_INSTALL_OBJC_HEADER = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		CE56510229CA5D2A00E95085 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = YSQD9849J2;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.NetworkLayerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PicsumImageViewer.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/PicsumImageViewer";
+			};
+			name = Debug;
+		};
+		CE56510329CA5D2A00E95085 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = YSQD9849J2;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.NetworkLayerTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
@@ -1364,6 +1660,24 @@
 			buildConfigurations = (
 				CE5650DA29CA4F5E00E95085 /* Debug */,
 				CE5650DB29CA4F5E00E95085 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CE5650FD29CA5D2A00E95085 /* Build configuration list for PBXNativeTarget "NetworkLayer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CE5650FE29CA5D2A00E95085 /* Debug */,
+				CE5650FF29CA5D2A00E95085 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CE56510129CA5D2A00E95085 /* Build configuration list for PBXNativeTarget "NetworkLayerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CE56510229CA5D2A00E95085 /* Debug */,
+				CE56510329CA5D2A00E95085 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

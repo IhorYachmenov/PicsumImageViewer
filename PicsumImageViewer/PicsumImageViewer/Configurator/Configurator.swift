@@ -12,7 +12,7 @@ import DomainLayer
 final class Configurator {
     class func initializeListScreen(delegate: ListScreenDelegate) -> ListScreen {
         
-        let useCase = DownloadImageUseCase()
+        let useCase = DownloadImagesUseCase()
         
         let viewModel = ListScreenViewModel(useCase: useCase)
         

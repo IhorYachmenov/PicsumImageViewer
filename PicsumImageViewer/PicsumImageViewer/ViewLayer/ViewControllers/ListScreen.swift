@@ -108,7 +108,7 @@ extension ListScreen: UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
         if indexPath.item == data.count - 1 {
-            viewModel.downloadImages()
+//            viewModel.downloadImages()
         }
     }
 }

@@ -13,9 +13,9 @@ public final class ListScreenViewModel: ListScreenViewModelInterface {
     
     public var observeData: ((Result<[PresentationModel.ImageObject], Error>) -> ())?
     
-    private var useCase: DownloadImageUseCaseInterface!
+    private var useCase: DownloadImagesUseCaseInterface!
     
-    public init(useCase: DownloadImageUseCaseInterface) {
+    public init(useCase: DownloadImagesUseCaseInterface) {
         self.useCase = useCase
         
         self.useCase.observeData = { [weak self] result in

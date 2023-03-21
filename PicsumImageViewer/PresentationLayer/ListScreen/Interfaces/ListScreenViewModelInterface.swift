@@ -13,8 +13,8 @@ public enum PresentationModel {
         public let id: String
         public let url: String
         public let author: String
-        public let height: String
-        public let width: String
+        public let height: Int
+        public let width: Int
     }
 }
 
