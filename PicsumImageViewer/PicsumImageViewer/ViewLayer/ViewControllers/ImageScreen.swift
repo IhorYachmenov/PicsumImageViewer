@@ -76,6 +76,7 @@ class ImageScreen: UIViewController {
     
     private func initUIComponents() {
         view.backgroundColor = .systemBackground
+        title = "Image Details"
         
         view.addSubview(label)
         view.addSubview(image)
@@ -121,5 +122,4 @@ class ImageScreen: UIViewController {
         let value = Int(sender.value)
         viewModel.changeImage(blurDensity: value)
     }
-    
 }
