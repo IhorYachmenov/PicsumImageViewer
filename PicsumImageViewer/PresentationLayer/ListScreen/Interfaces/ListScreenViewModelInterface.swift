@@ -29,6 +29,6 @@ extension PresentationModel.Image {
 }
 
 public protocol ListScreenViewModelInterface: AnyObject {
-    func downloadImages()
     var observeData: ((Result<[PresentationModel.Image], Error>) -> ())? { get set }
+    func downloadImages()
 }

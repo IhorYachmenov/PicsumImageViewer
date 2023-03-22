@@ -28,6 +28,6 @@ extension DomainModel.Image {
     }
 }
 public protocol DownloadImagesUseCaseInterface: AnyObject {
-    func downloadImages(page: Int)
     var observeData: ((Result<[DomainModel.Image], Error>) -> ())? { get set }
+    func downloadImages(page: Int)
 }

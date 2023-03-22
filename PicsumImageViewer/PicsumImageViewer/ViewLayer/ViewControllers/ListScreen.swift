@@ -74,7 +74,7 @@ class ListScreen: UIViewController {
     }
     
     private func initUIComponents() {
-        view.backgroundColor = .white
+        view.backgroundColor = .systemBackground
         title = "Picsum"
         view.addSubview(collectionView)
     }

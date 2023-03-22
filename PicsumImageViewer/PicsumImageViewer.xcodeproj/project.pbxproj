@@ -53,6 +53,8 @@
 		CE56510E29CA62A100E95085 /* Optional.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE56510D29CA62A100E95085 /* Optional.swift */; };
 		CE56510F29CA71E000E95085 /* DomainLayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE5650C029CA4F5D00E95085 /* DomainLayer.framework */; };
 		CE56511429CA71E800E95085 /* NetworkLayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE5650E829CA5D2500E95085 /* NetworkLayer.framework */; };
+		CE56511C29CA765600E95085 /* ImageScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE56511B29CA765600E95085 /* ImageScreenViewModel.swift */; };
+		CE56511E29CA766500E95085 /* ImageScreenViewModelInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE56511D29CA766500E95085 /* ImageScreenViewModelInterface.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -209,6 +211,8 @@
 		CE56510729CA5E6300E95085 /* NetworkModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkModel.swift; sourceTree = "<group>"; };
 		CE56510A29CA601000E95085 /* Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
 		CE56510D29CA62A100E95085 /* Optional.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Optional.swift; sourceTree = "<group>"; };
+		CE56511B29CA765600E95085 /* ImageScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageScreenViewModel.swift; sourceTree = "<group>"; };
+		CE56511D29CA766500E95085 /* ImageScreenViewModelInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageScreenViewModelInterface.swift; sourceTree = "<group>"; };
 		CFAF32FEBF049F5C259E3638 /* Pods_PresentationLayer_PresentationLayerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PresentationLayer_PresentationLayerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4B1614AFFDA0F98C9EFEC07 /* Pods-NetworkLayer-NetworkLayerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NetworkLayer-NetworkLayerTests.debug.xcconfig"; path = "Target Support Files/Pods-NetworkLayer-NetworkLayerTests/Pods-NetworkLayer-NetworkLayerTests.debug.xcconfig"; sourceTree = "<group>"; };
 		D956474242CBAEE51F565C6B /* Pods_PicsumImageViewer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PicsumImageViewer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -524,6 +528,7 @@
 		CE56509329CA40C600E95085 /* PresentationLayer */ = {
 			isa = PBXGroup;
 			children = (
+				CE56511929CA763C00E95085 /* ImageScreen */,
 				CE5650AE29CA40CE00E95085 /* ListScreen */,
 			);
 			path = PresentationLayer;
@@ -636,6 +641,23 @@
 				CE56510D29CA62A100E95085 /* Optional.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		CE56511929CA763C00E95085 /* ImageScreen */ = {
+			isa = PBXGroup;
+			children = (
+				CE56511A29CA764800E95085 /* Interfaces */,
+				CE56511B29CA765600E95085 /* ImageScreenViewModel.swift */,
+			);
+			path = ImageScreen;
+			sourceTree = "<group>";
+		};
+		CE56511A29CA764800E95085 /* Interfaces */ = {
+			isa = PBXGroup;
+			children = (
+				CE56511D29CA766500E95085 /* ImageScreenViewModelInterface.swift */,
+			);
+			path = Interfaces;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1263,7 +1285,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE56511C29CA765600E95085 /* ImageScreenViewModel.swift in Sources */,
 				CE5650B329CA411500E95085 /* ListScreenViewModelInterface.swift in Sources */,
+				CE56511E29CA766500E95085 /* ImageScreenViewModelInterface.swift in Sources */,
 				CE5650B029CA40ED00E95085 /* ListScreenViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
