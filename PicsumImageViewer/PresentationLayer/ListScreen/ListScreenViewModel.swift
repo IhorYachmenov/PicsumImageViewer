@@ -30,6 +30,8 @@ public final class ListScreenViewModel: ListScreenViewModelInterface {
                     self?.observeData?(.failure(failure))
                 }
                 
+                self?.repeatLoadingIfFailure()
+                
                 if (self?.page != 1) {
                     self?.page -= 1
                 }
@@ -40,5 +42,11 @@ public final class ListScreenViewModel: ListScreenViewModelInterface {
     public func downloadImages() {
         useCase.downloadImages(page: page)
         page += 1
+    }
+    
+    private func repeatLoadingIfFailure() {
+        DispatchQueue.global().asyncAfter(deadline: .now() + 5.0, execute: { [weak self] in
+            self?.downloadImages()
+        })
     }
 }
