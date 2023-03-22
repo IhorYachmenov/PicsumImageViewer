@@ -19,7 +19,7 @@ public final class DownloadImagesUseCase: DownloadImagesUseCaseInterface {
     }
     
     public func downloadImages(page: Int) {
-        networkClient.downloadImages(url: "https://picsum.photos/v2/list?page=\(page)&limit=20") { [weak self] result in
+        networkClient.downloadImages(page: page) { [weak self] result in
             switch result {
             case .success(let success):
                 self?.observeData?(.success(success.map({ DomainModel.Image(data: $0)} )))

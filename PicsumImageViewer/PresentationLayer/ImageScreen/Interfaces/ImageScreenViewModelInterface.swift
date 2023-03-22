@@ -25,8 +25,8 @@ extension PresentationModel {
 }
 
 public protocol ImageScreenViewModelInterface: AnyObject {
-    var observeImage: ((URL) -> ())? { get set }
+    var observeImageURL: ((URL) -> ())? { get set }
     func labelData() -> String
     func loadImage(type: PresentationModel.ImageType)
-    func changeImage(blurDensity: Int)
+    func changeImageBlur(density: Int)
 }

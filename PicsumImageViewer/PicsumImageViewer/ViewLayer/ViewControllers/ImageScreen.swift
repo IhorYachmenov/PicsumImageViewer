@@ -51,7 +51,7 @@ class ImageScreen: UIViewController {
         slider.maximumValue = 10
         slider.value = 1
         slider.isHidden = true
-        slider.addTarget(self, action: #selector(sliderValueChanged(_:)), for: .valueChanged)
+        slider.addTarget(self, action: #selector(sliderValueChanged(_:)), for: .touchUpInside)
 
         return slider
     }()
@@ -61,7 +61,7 @@ class ImageScreen: UIViewController {
         
         initUIComponents()
         
-        viewModel.observeImage = { [weak self] url in
+        viewModel.observeImageURL = { [weak self] url in
             self?.image.sd_cancelCurrentImageLoad()
             self?.image.sd_setImage(with: url, placeholderImage: UIImage(systemName: "photo"))
         }
@@ -120,6 +120,6 @@ class ImageScreen: UIViewController {
     
     @objc func sliderValueChanged(_ sender: UISlider) {
         let value = Int(sender.value)
-        viewModel.changeImage(blurDensity: value)
+        viewModel.changeImageBlur(density: value)
     }
 }

@@ -12,8 +12,8 @@ public final class NetworkClient {
         
     }
     
-    public func downloadImages(url: String, completion: @escaping (Result<[NetworkModel.Image], Error>) ->()) {
-        if let url = URL(string: url) {
+    public func downloadImages(page: Int, completion: @escaping (Result<[NetworkModel.Image], Error>) ->()) {
+        if let url = URL(string: "https://picsum.photos/v2/list?page=\(page)&limit=20") {
             let session = URLSession.shared
             let task = session.dataTask(with: url) { (data, response, error) in
                 if let error = error {

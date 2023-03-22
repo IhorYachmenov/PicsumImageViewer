@@ -8,7 +8,7 @@
 import Foundation
 
 public final class ImageScreenViewModel: ImageScreenViewModelInterface {
-    public var observeImage: ((URL) -> ())?
+    public var observeImageURL: ((URL) -> ())?
     
     private let image: PresentationModel.Image
     private var blurDensity = 1
@@ -27,16 +27,16 @@ public final class ImageScreenViewModel: ImageScreenViewModelInterface {
     
     public func loadImage(type: PresentationModel.ImageType) {
         let url = URL(string: createURLPath(type: type))!
-        observeImage?(url)
+        observeImageURL?(url)
     }
     
-    public func changeImage(blurDensity: Int) {
-        self.blurDensity = blurDensity
+    public func changeImageBlur(density: Int) {
+        self.blurDensity = density
         let string = createURLPath(type: .blur)
         print(string)
         let url = URL(string: string)!
         
-        observeImage?(url)
+        observeImageURL?(url)
     }
     
     private func createURLPath(type: PresentationModel.ImageType) -> String {

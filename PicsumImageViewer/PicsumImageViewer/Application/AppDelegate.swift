@@ -7,6 +7,7 @@
 
 import UIKit
 
+#warning("Conditions")
 /*
 The interview test
 Consume this public API https://picsum.photos/
