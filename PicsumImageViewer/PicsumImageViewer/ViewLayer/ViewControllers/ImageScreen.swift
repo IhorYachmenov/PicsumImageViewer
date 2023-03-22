@@ -65,6 +65,9 @@ class ImageScreen: UIViewController {
             self?.image.sd_cancelCurrentImageLoad()
             self?.image.sd_setImage(with: url, placeholderImage: UIImage(systemName: "photo"))
         }
+        
+        // This line only for simulator, viewModel handle automatic loading, and on real device all work well
+        viewModel.loadImage(type: .normal)
     }
     
     deinit {
@@ -87,7 +90,7 @@ class ImageScreen: UIViewController {
         image.heightAnchor.constraint(equalToConstant: 200).isActive = true
         image.topAnchor.constraint(equalTo: label.bottomAnchor, constant: 30).isActive = true
         image.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 10).isActive = true
-        image.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: 10).isActive = true
+        image.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -10).isActive = true
         
         segmentController.topAnchor.constraint(equalTo: image.bottomAnchor, constant: 30).isActive = true
         segmentController.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 10).isActive = true
