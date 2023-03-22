@@ -30,7 +30,7 @@ public final class ImageScreenViewModel: ImageScreenViewModelInterface {
         observeImage?(url)
     }
     
-    public func loadImage(blurDensity: Int) {
+    public func changeImage(blurDensity: Int) {
         self.blurDensity = blurDensity
         let string = createURLPath(type: .blur)
         print(string)

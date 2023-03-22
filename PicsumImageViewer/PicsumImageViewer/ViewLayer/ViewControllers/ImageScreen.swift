@@ -62,6 +62,7 @@ class ImageScreen: UIViewController {
         initUIComponents()
         
         viewModel.observeImage = { [weak self] url in
+            self?.image.sd_cancelCurrentImageLoad()
             self?.image.sd_setImage(with: url, placeholderImage: UIImage(systemName: "photo"))
         }
     }
@@ -115,8 +116,7 @@ class ImageScreen: UIViewController {
     
     @objc func sliderValueChanged(_ sender: UISlider) {
         let value = Int(sender.value)
-        print("Slider value changed to \(value)")
-        viewModel.loadImage(blurDensity: value)
+        viewModel.changeImage(blurDensity: value)
     }
     
 }

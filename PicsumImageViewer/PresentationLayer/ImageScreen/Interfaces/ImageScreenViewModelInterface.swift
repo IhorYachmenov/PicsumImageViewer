@@ -28,5 +28,5 @@ public protocol ImageScreenViewModelInterface: AnyObject {
     var observeImage: ((URL) -> ())? { get set }
     func labelData() -> String
     func loadImage(type: PresentationModel.ImageType)
-    func loadImage(blurDensity: Int)
+    func changeImage(blurDensity: Int)
 }
