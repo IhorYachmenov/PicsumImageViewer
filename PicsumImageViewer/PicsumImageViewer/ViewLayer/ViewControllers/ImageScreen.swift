@@ -68,9 +68,47 @@ class ImageScreen: UIViewController {
         
         // This line only for simulator, viewModel handle automatic loading, and on real device all work well
         viewModel.loadImage(type: .normal)
+        
+//        testDispatchItems()
+    }
+    
+    func testDispatchItems() {
+        let queue = DispatchQueue.global()
+
+        var item: DispatchWorkItem?
+
+        // create work item
+
+        item = DispatchWorkItem { [weak self] in
+            for i in 0 ... 10_000_000 {
+                if item?.isCancelled ?? true { break }
+                print(i)
+                self?.heavyWork(id: i)
+            }
+            item = nil    // resolve strong reference cycle of the `DispatchWorkItem`
+        }
+
+        // start it
+
+        queue.async(execute: item!)
+
+        // after five seconds, stop it if it hasn't already
+
+        queue.asyncAfter(deadline: .now() + 3) {
+            print("!!! Try To cancel", item?.cancel())
+            item?.cancel()
+            item = nil
+            print("!!! item ", item)
+        }
+    }
+    func heavyWork(id: Int) {
+        for i in 0 ... 10_000_000 {
+            print("My id is", id, "iterator", i)
+        }
     }
     
     deinit {
+        print("deinit", Self.description())
         coordinatorDelegate?.closeScreen()
     }
     
